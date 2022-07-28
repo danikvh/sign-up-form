@@ -47,6 +47,17 @@ table {
 
 
 
+@font-face {
+    font-family: my-cool-font;
+    src: url(/resources/Norse-Bold.otf);
+  }
+  
+:root {
+    --margin-left: 30px;
+    --primary-color: hsl(103, 18%, 32%);
+    --primary-color2: hsl(104, 18%, 28%);
+    --primary-color3: hsl(104, 18%, 20%);
+}
 
 .container-main {
     height: 100vh;
@@ -61,10 +72,34 @@ table {
     background-image: url("images/background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    width: 450px;
+    width: 400px;
     height: 100vh;
     color: white;
+    font-size: 11px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
 }
+
+.logo-box {
+    background-color: hsla(0, 0%, 0%, 0.445);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+}
+
+.logo {
+    font-family: my-cool-font;
+    font-size: 60px;
+}
+
+.credit {
+    text-align: center;
+    margin-top: 350px;
+    margin-bottom: 10px;
+}
+
 
 .right-box {
     width: 600px;
@@ -72,12 +107,111 @@ table {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    overflow: auto;
+}
+
+.text-main, .subtext {
+    margin-left: var(--margin-left);
+    margin-right: 70px;
+    font-weight: 700;
+    line-height: 20px;
+}
+
+.text-main {
+    margin-bottom: 20px;
+}
+
+.subtext {
+    margin-bottom: 50px;
 }
 
 .formulary {
     background-color: white;
+    padding: 20px 0px;
+    box-shadow: 0px 4px 7px rgb(201, 201, 201);
+    color: rgb(37, 37, 37);
 }
 
-form {
+.form-box {
     display: flex;
+}
+
+.form-text, .form-left {
+    margin-left: var(--margin-left);
+}
+
+.form-text {
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.form-left, .form-right {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 12px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-bottom: 10px;
+    margin-right: 40px;
+}
+
+input {
+    height: 20px;
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 4px;
+}
+
+input:focus {
+    border: 1px solid rgb(42, 58, 202);
+    box-shadow: 1px 1px 4px rgb(155, 155, 155);
+    outline: none;
+}
+
+input:not(:focus):not(:placeholder-shown):invalid {
+    border: 1px solid rgb(202, 42, 42);
+    box-shadow: 1px 1px 4px rgb(155, 155, 155);
+    outline: none;
+}
+
+#error {
+    color: rgba(218, 2, 2, 0);
+}
+
+#error.activated {
+    color: rgb(218, 2, 2);
+}
+
+button {
+    height: 40px;
+    width: 200px;
+    color: white;
+    margin-left: var(--margin-left);
+    margin-top: 30px;
+    background-color: var(--primary-color);
+    border: 0px solid black;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+button:hover {
+    background-color: var(--primary-color2);
+}
+
+button:active {
+    background-color: var(--primary-color3);
+}
+
+.log-text {
+    margin-left: var(--margin-left);
+    margin-top: 20px;
+}
+
+.log {
+    color: var(--primary-color2);
 }

@@ -5,48 +5,65 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <title>Document</title>
 </head>
 <body>
     <div class="container-main">
         <div class="left-box">
-            <p>Photo by Roan Lavery on Unsplash</p>
+            <div class="logo-box">
+                <p class="logo">Daniel K.</p>
+            </div>
+            <p class="credit">Photo by Roan Lavery on Unsplash</p>
         </div>
         <div class="right-box">
-            <p>This is not a real online service! You know you 
+            <p class="text-main">This is not a real online service! You know you 
                 need something like this in your life to help you 
                 realize your deepest dreams. Sign up <i>now</i> to get started.
-
+            </p>
+            <p class="subtext">
                 You <i>know</i> you want to.
             </p>
-            <div class="formulary">
-                <p>Let's do this!</p>
-                <form>
-                    <div class="form-left">
-                        <label for="first_name">FIRST NAME</label>
-                        <input type="text" id="first_name" name="first_name">
-
-                        <label for="email">EMAIL</label>
-                        <input type="email" id="email" name="email">
-
-                        <label for="password">PASSWORD</label>
-                        <input type="password" id="password" name="password">
+            <form action="#">
+                <div class="formulary">
+                    <p class="form-text">Let's do this!</p>
+                    <div class="form-box">
+                        <div class="form-left">
+                            <div class="box">
+                                <label for="first_name">FIRST NAME</label>
+                                <input type="text" id="first_name" name="first_name" placeholder=" " required>
+                            </div>
+                            <div class="box">
+                                <label for="email">EMAIL</label>
+                                <input type="email" id="email" name="email" placeholder=" " required>
+                            </div>
+                            <div class="box">
+                                <label for="password">PASSWORD</label>
+                                <input type="password" id="password" name="password" placeholder=" " required>
+                                <p id="error">*Passwords do not match</p>
+                            </div>
+                        </div>
+                        <div class="form-right">
+                            <div class="box">
+                                <label for="last_name">LAST NAME</label>
+                                <input type="text" id="last_name" name="last_name" placeholder=" " required>
+                            </div>
+                            <div class="box">
+                                <label for="phone">PHONE NUMBER</label>
+                                <input type="text" id="phone" name="phone" placeholder=" " required>
+                            </div>
+                            <div class="box">
+                                <label for="password-confirm">CONFIRM PASSWORD</label>
+                                <input type="password" id="password-confirm" name="password-confirm" placeholder=" " required>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="form-right">
-                        <label for="last_name">LAST NAME</label>
-                        <input type="text" id="last_name" name="last_name">
-
-                        <label for="phone">PHONE NUMBER</label>
-                        <input type="text" id="phone" name="phone">
-
-                        <label for="password">CONFIRM PASSWORD</label>
-                        <input type="password" id="password" name="password">
-                    </div>
-                </form>
-            </div>
-            <button type="submit">Create Account</button>
-            <p>Already have an account? <span>Log in</span></p>
+                </div>
+                <div class="button-create">
+                    <button type="submit" id="submit-button">Create Account</button>
+                </div>
+            </form>
+            <p class="log-text">Already have an account? <span class="log">Log in</span></p>
         </div>
     </div>
 </body>
